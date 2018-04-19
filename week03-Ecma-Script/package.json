@@ -1,0 +1,29 @@
+{
+  "name": "week03-ecma-script",
+  "version": "1.0.0",
+  "description": "learning about ES6 in CharlieClass",
+  "main": "inClass.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "./node_modules/.bin/babel inClass.js -d bundle"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/bretlinne/prog272-linne-2018.git"
+  },
+  "keywords": [
+    "ES6",
+    "Babel"
+  ],
+  "author": "Bret Linne",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/bretlinne/prog272-linne-2018/issues"
+  },
+  "homepage": "https://github.com/bretlinne/prog272-linne-2018#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-stage-1": "^6.24.1"
+  }
+}
