@@ -30,6 +30,7 @@ class App extends Component {
                 <p className="App-intro">file:{this.state.file}</p>;
 
                 <button id='getFile' onClick={this.getFile}>Get File</button>
+                <hr />
             </div>
         );
     }
