@@ -15,6 +15,9 @@ function divider(title) {
     console.log(title);
     console.log("====================================");
 }
+npm install --save-dev babel-preset-env 
+npm install --save-dev babel-preset-react babel-preset-es2015
+
 
 // ---------------------
 // Calculator
