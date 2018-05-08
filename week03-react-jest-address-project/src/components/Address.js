@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
-
+import '../css/App.css';
+import AddressShow from './AddressShow';
+import addressList from './';
 import '../App.css';
 
 class App extends Component {
@@ -59,6 +61,18 @@ class App extends Component {
             </div>
         );
     }
+}
+
+render()
+{
+    return (
+        <div>
+            <AddressShow
+                address={this.state.address}
+                setAddress={this.setAddress}
+            />
+        </div>
+    );
 }
 
 export default App;
