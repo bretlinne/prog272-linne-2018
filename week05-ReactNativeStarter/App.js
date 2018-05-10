@@ -19,7 +19,8 @@ export default class App extends React.Component {
         console.log('fetchMicro in console now');
         const that = this;
         //const ip = 'ccalvert.com';
-        const ip = '168.156.46.54';
+        //const ip = '168.156.46.54';
+        const ip = '192.168.1.11';
         fetch('http://' + ip + ':30025/search')
         //fetch('http://' + ip + ':30027/you-rang')
             .then((response) => response.json())
@@ -37,7 +38,7 @@ export default class App extends React.Component {
 
         return (
             <View style={styles.container}>
-                <Text>Foobar!</Text>
+                <Text>Hi Ben!  This is the cool thing I wanted to show</Text>
                 <Text>{this.state.foo}</Text>
                 <Text>{this.state.result}</Text>
                 <Text>Shake your phone to open the developer menu.</Text>

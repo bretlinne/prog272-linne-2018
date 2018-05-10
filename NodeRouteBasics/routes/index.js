@@ -10,7 +10,7 @@ router.get('/', function(req, res, next) { 'use strict';
 router.get('/search', function(req, res, next) {    // changed '/' to '/search'
   'use strict';
   console.log('Server side search called');
-    res.send({result:'success foo,',           // changed render to send &
+    res.send({result:'success that this worked.  foo,',           // changed render to send &
                                             // replaced old param w/ result:'success'
                                             // this stubs out the search route
         value:'search result is',

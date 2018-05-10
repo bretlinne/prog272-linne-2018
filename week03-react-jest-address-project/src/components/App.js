@@ -27,7 +27,7 @@ class App extends Component {
                 <p className="App-intro">
                     To get started, edit <code>src/App.js</code> and save to reload.
                 </p>
-                <p className="App-intro">file:{this.state.file}</p>;
+                <p className="App-intro">file:{this.state.file}</p>
 
                 <button id='getFile' onClick={this.getFile}>Get File</button>
                 <hr />
