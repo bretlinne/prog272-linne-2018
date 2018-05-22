@@ -1,0 +1,17 @@
+{
+  "name": "getaddress",
+  "version": "1.0.0",
+  "description": "Create a list of Congress Addresses",
+  "main": "get-address.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Address"
+  ],
+  "author": "Bret Linne",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "debug": "^3.1.0"
+  }
+}
