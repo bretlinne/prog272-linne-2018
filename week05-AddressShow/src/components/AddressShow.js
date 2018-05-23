@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import '../css/App.css';
+import '../address-list';
 
 class AddressShow extends Component{
     constructor(props) {
@@ -7,7 +8,7 @@ class AddressShow extends Component{
 
         this.addressIndex=0;
         this.state = {
-            address: AddressList[this.addressIndex]  <=== HERE
+            address: AddressList[this.addressIndex]  //<=== HERE
         };
         this.debug = true;
         if (this.debug) {
