@@ -16,7 +16,11 @@
     "test": "jest"
   },
   "jest": {
-    "preset": "jest-expo"
+    "preset": "jest-expo",
+    "transformIgnorePatterns": [
+      "!node_modules/react-runtime"
+    ],
+    "snapshotSerializers": ["enzyme-to-json/serializer"]
   },
   "dependencies": {
     "expo": "^27.0.1",

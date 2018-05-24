@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
 import '../css/App.css';
 import AddressShow from './AddressShow';
-import '../App.css';
 import tempAddressList from '../address-list';
 
 class Address extends Component {
+
     constructor(props) {
         super();
         this.debug = false;
@@ -18,28 +18,31 @@ class Address extends Component {
         this.GetAddress();
     }
 
-    log(message, message2 = '',message3 = ''){
-        if(typeof message2 === 'object') {
+    log(message, message2 = '', message3 = '') {
+        if (typeof message2 === 'object') {
             message2 = JSON.stringify(message2, null, 4);
         }
-        if(this.debug) {
+        if (this.debug) {
             const label = this.constructor.name + ': ';
             console.log(label, message, message2, message3);
         }
     }
 
+
     GetAddress = () => {
         fetch('/address-list')
             .then(response => response.json())
             .then(addressListFromServer =>{
-                console.log(AddressListFromServer);
-                this.addressList = AddressListFromServer;
+                if(!this.cancelled){
+                    this.setState({addressList: addressListFromServer});
+                    this.setState({index: 0});
+                }
             })
             .catch(ex => {
                 console.log(ex);
             });
     };
-}
+
 
     getFile = () => {
         console.log('getFile called.');
@@ -50,10 +53,9 @@ class Address extends Component {
         if (this.debug) {
             console.log('setAddress called.');
         }
-        this.addressIndex += offset;
-        this.setState({
-            address: setAddress[this.addressIndex]
-        });
+        const value = this.state.addressIndex += offset;
+        this.setState({addressIndex: value });
+        this.setState({address: this.state.addressList[value] });
     };
 
     render() {
@@ -70,4 +72,4 @@ class Address extends Component {
     }
 }
 
-export default App;
+export default Address;

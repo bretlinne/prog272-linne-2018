@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Address from './components/Address'
+import Address from '../components/Address'
 import {configure, shallow} from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
-import addresses from './address-list'
+import addresses from '../address-list'
 
 
 describe('AddressShow Shallow Suite', function() {
@@ -36,23 +36,32 @@ describe('AddressShow Shallow Suite', function() {
         }
     };
 
+    const setAddress = () =>{
+        const address = addresses[1];
+        wrapper.setProps({address: address});
+    }
+
     const defaultFieldTest = (name, index, talkToMe) => {
         const wrapper = shallow(<AddressShow address={AddressList[0]}/>);
         const welcome = <p className="App-intro">{name}</p>;
+        console.log(wrapper.debug);
+        console.log("Foo");
         getIndex(wrapper, index, talkToMe);
         expect(wrapper.contains(welcome)).toEqual(true);
     };
 
     const afterClickFieldTest = (name, index, talkToMe) => {
-        const wrapper = shallow(<AddressShow address={AddressList[1]}/>);
+        wrapper = shallow(<AddressShow
+            address={AddressList[1]}
+            setAddress={setAddress} />);
         const welcome = <p className="App-intro">{name}</p>;
-        getIndex(wrapper, index, talkToMe);
+        wrapper.find('#setAddress').simulate('click');
         expect(wrapper.contains(welcome)).toEqual(true);
     };
 
-    it('renders and displays the first name', () => {
+    fit('renders and displays the first name', () => {
         defaultFieldTest('First Name: unknown', 0);
-        afterClickFieldTest('First Name: ' + addressTest.firstName, 0);
+        //afterClickFieldTest('First Name: ' + addressTest.firstName, 0);
     });
 
     // EVENTUALLY YOU WILL NEED TO WRITE MORE TESTS LIKE THE FIRST NAME TEST.

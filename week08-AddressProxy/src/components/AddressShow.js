@@ -7,7 +7,7 @@ class AddressShow extends Component{
 
         this.addressIndex=0;
         this.state = {
-            address: AddressList[this.addressIndex]  <=== HERE
+            address: AddressList[this.addressIndex]
         };
         this.debug = true;
         if (this.debug) {
