@@ -4,7 +4,7 @@ import App from '../components/App';
 import AddressShow from '../components/AddressShow';
 import {configure, shallow} from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16'
-import addresses from "../address-list";
+import AddressList from "../address-list";
 configure({adapter: new Adapter()});
 
 describe('AddressShow Shallow Suite', function() {
@@ -12,15 +12,14 @@ describe('AddressShow Shallow Suite', function() {
     const debug = false;
 
     const addressTest = {
-        firstName: 'Patty',
-        lastName: 'Murray',
-        address: '154 Russell Senate Office Building',
+        firstName: 'Curly',
+        lastName: 'Howard',
         city: 'Washington',
         state: 'D.C.',
         zip: '20510',
-        phone: '(202) 224-2621',
-        fax: '(202) 224-0238',
-        tollfree: '(866) 481-9186'
+        phone: '(555) 555-2621',
+        fax: '(555) 555-0238',
+        tollfree: '(555) 555-9186'
     };
 
 
@@ -40,6 +39,7 @@ describe('AddressShow Shallow Suite', function() {
     const defaultFieldTest = (name, index, talkToMe) => {
         const wrapper = shallow(<AddressShow address={AddressList[0]}/>);
         const welcome = <p className="App-intro">{name}</p>;
+        //console.log(welcome);
         getIndex(wrapper, index, talkToMe);
         expect(wrapper.contains(welcome)).toEqual(true);
     };
@@ -47,15 +47,58 @@ describe('AddressShow Shallow Suite', function() {
     const afterClickFieldTest = (name, index, talkToMe) => {
         const wrapper = shallow(<AddressShow address={AddressList[1]}/>);
         const welcome = <p className="App-intro">{name}</p>;
+     //   console.log("being passed: ", name);
         getIndex(wrapper, index, talkToMe);
         expect(wrapper.contains(welcome)).toEqual(true);
     };
 
-    fit('renders and displays the first name', () => {
+    it('renders and displays the first name', () => {
         defaultFieldTest('First Name: unknown', 0);
         afterClickFieldTest('First Name: ' + addressTest.firstName, 0);
     });
 
+    it('renders and displays the last name', () => {
+        defaultFieldTest('Last Name: unknown', 0);
+        afterClickFieldTest('Last Name: ' + addressTest.lastName, 0);
+    });
+/*
+    fit('renders and displays the address', () => {
+        defaultFieldTest('Address: unknown', 0);
+        afterClickFieldTest('Address: ' + addressTest.address , 0);
+    });
+*/
+    it('renders and displays the address', () => {
+        //const addressTestValue = <p className="App-intro">'Address: unknown'</p>
+        defaultFieldTest('Address: unknown', 0);
+        afterClickFieldTest('Address: 154 Wiseguy Ave', 0);
+    });
+
+    it('renders and displays the city', () => {
+        defaultFieldTest('City: unknown', 0);
+        afterClickFieldTest('City: ' + addressTest.city, 0);
+    });
+
+    it('renders and displays the state', () => {
+        defaultFieldTest('State: unknown', 0);
+        afterClickFieldTest('State: ' + addressTest.state, 0);
+    });
+
+    it('renders and displays the zip', () => {
+        defaultFieldTest('Zip: unknown', 0);
+        afterClickFieldTest('Zip: ' + addressTest.zip, 0);
+    });
+    it('renders and displays the phone', () => {
+        defaultFieldTest('Phone: unknown', 0);
+        afterClickFieldTest('Phone: ' + addressTest.phone, 0);
+    });
+    it('renders and displays the fax', () => {
+        defaultFieldTest('Fax: unknown', 0);
+        afterClickFieldTest('Fax: ' + addressTest.fax, 0);
+    });
+    it('renders and displays the tollfree', () => {
+        defaultFieldTest('Toll Free: unknown', 0);
+        afterClickFieldTest('Toll Free: ' + addressTest.tollfree, 0);
+    });
     // EVENTUALLY YOU WILL NEED TO WRITE MORE TESTS LIKE THE FIRST NAME TEST.
     // THE GOAL WILL BE TO TEST ALL THE PROPERTIES OF OUR COMPONENT.
     // AT FIRST, HOWEVER, JUST KEEP THESE TWO TESTS. WHEN THEY START

@@ -7,13 +7,14 @@ class AddressShow extends Component {
     constructor(props) {
         super(props);
 
-        this.debug = true;
+        this.debug = false;
         if(this.debug){
 
             console.log('ADDRESS-SHOW CONSTRUCTOR', this.props.address);
         }
 
     }
+
     log(message, message2 = '', message3 = '') {
         if (this.debug) {
             console.log(message, message2, message3);
@@ -38,21 +39,17 @@ class AddressShow extends Component {
         if(this.debug){ console.log('ADDRESS-SHOW RENDER', this.props);}
         return (
             <div className="App">
-                <hr />
                 <button id="showAddressClick" onClick={this.props.setAddress}>Show Address</button>
-                <h1 className="App-title">Address Info</h1>
-                <p className="App-intro">
-                    First Name: {this.props.address.firstName} <br />
-                    Last Name: {this.props.address.lastName} <br />
-                    Address: {this.props.address.address} <br />
-                    City: {this.props.address.city} <br />
-                    State: {this.props.address.state} <br />
-                    Zip: {this.props.address.zip} <br />
-                    Phone: {this.props.address.phone} <br />
-                    Fax: {this.props.address.fax} <br />
-                    Toll Free: {this.props.address.tollfree} <br />
-                </p>
 
+                <p className="App-intro">First Name: {this.props.address.firstName}</p>
+                <p className="App-intro">Last Name: {this.props.address.lastName}</p>
+                <p className="App-intro">Address: {this.props.address.address}</p>
+                <p className="App-intro">City: {this.props.address.city}</p>
+                <p className="App-intro">State: {this.props.address.state}</p>
+                <p className="App-intro">Zip: {this.props.address.zip}</p>
+                <p className="App-intro">Phone: {this.props.address.phone}</p>
+                <p className="App-intro">Fax: {this.props.address.fax}</p>
+                <p className="App-intro">Toll Free: {this.props.address.tollfree}</p>
             </div>
         );
     }

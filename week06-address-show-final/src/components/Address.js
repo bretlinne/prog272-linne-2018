@@ -28,6 +28,8 @@ class Address extends Component {
     render() {
         return (
             <div className="App" id="Address">
+                <hr />
+                <h1 className="App-title">Address Info</h1>
                 <AddressShow
                     address={this.state.address}
                     setAddress={this.setAddress} />
