@@ -30,22 +30,19 @@ class Header extends Component {
                     open={this.state.open}
                     onRequestChange={this.handleToggle}
                 >
-                    <AppBar title="Address Maven"/>
+                    <AppBar title="Address Maven" />
 
                     <MenuItem
-                        primaryText='Address'
-                        containerElement={<Link to="/"/>}
+                        primaryText="Address"
+                        containerElement={<Link to="/" />}
                         onClick={this.handleToggle}
                     />
                     <MenuItem
-                        primaryText='GetFile'
-                        containerElement={<Link to="/get-file"/>}
+                        primaryText="GetFile"
+                        containerElement={<Link to="/get-file" />}
                         onClick={this.handleToggle}
                     />
-
-
                 </Drawer>
-
             </div>
         );
     }

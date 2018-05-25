@@ -1,28 +1,13 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import App from '../components/App';
+
 import AddressShow from '../components/AddressShow';
-import {configure, shallow} from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16'
-import AddressList from "../address-list";
-configure({adapter: new Adapter()});
+import { configure, shallow } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
+import AddressList from '../address-list';
+configure({ adapter: new Adapter() });
 
 describe('AddressShow Shallow Suite', function() {
-
     const debug = false;
-
-    const addressTest = {
-        firstName: 'Curly',
-        lastName: 'Howard',
-        address: '154 Wiseguy Ave',
-        city: 'Washington',
-        state: 'D.C.',
-        zip: '20510',
-        phone: '(555) 555-2621',
-        fax: '(555) 555-0238',
-        tollfree: '(555) 555-9186'
-    };
-
 
     /*
      * Display debug information about a DOM node of a component by index
@@ -32,13 +17,16 @@ describe('AddressShow Shallow Suite', function() {
      */
     const getIndex = (wrapper, index, talkToMe) => {
         if (debug || talkToMe) {
-            const ninep = wrapper.find('div#addressShow').childAt(index).debug();
+            const ninep = wrapper
+                .find('div#addressShow')
+                .childAt(index)
+                .debug();
             console.log('NINEP:', ninep);
         }
     };
 
     const defaultFieldTest = (name, index, talkToMe) => {
-        const wrapper = shallow(<AddressShow address={AddressList[0]}/>);
+        const wrapper = shallow(<AddressShow address={AddressList[0]} />);
         const welcome = <p className="App-intro">{name}</p>;
         //console.log(welcome);
         getIndex(wrapper, index, talkToMe);
@@ -46,9 +34,9 @@ describe('AddressShow Shallow Suite', function() {
     };
 
     const afterClickFieldTest = (name, index, talkToMe) => {
-        const wrapper = shallow(<AddressShow address={AddressList[1]}/>);
+        const wrapper = shallow(<AddressShow address={AddressList[1]} />);
         const welcome = <p className="App-intro">{name}</p>;
-     //   console.log("being passed: ", name);
+        //   console.log("being passed: ", name);
         getIndex(wrapper, index, talkToMe);
         expect(wrapper.contains(welcome)).toEqual(true);
     };
@@ -104,7 +92,4 @@ describe('AddressShow Shallow Suite', function() {
     // THE GOAL WILL BE TO TEST ALL THE PROPERTIES OF OUR COMPONENT.
     // AT FIRST, HOWEVER, JUST KEEP THESE TWO TESTS. WHEN THEY START
     // PASSING, THEN ADD TESTS FOR THE OTHER PROPERTIES SUCH AS LASTNAME...
-
 });
-
-

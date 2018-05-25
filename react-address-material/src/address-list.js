@@ -22,7 +22,6 @@ const addresses = [
         fax: '(555) 555-0238',
         tollfree: '(555) 555-9186'
     }
-
 ];
 
 export default addresses;
