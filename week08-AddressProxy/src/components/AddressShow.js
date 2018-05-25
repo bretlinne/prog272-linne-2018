@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import '../css/App.css';
+import AddressList from '../address-list'
+
 
 class AddressShow extends Component{
     constructor(props) {
