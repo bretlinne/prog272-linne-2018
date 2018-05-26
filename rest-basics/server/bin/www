@@ -5,14 +5,14 @@
  */
 
 var app = require('../app');
-var debug = require('debug')('NodeRouteBasics:server');
+var debug = require('debug')('server:server');
 var http = require('http');
 
 /**
  * Get port from environment and store in Express.
  */
 
-var port = normalizePort( '30026');
+var port = normalizePort('30026');
 app.set('port', port);
 
 /**
