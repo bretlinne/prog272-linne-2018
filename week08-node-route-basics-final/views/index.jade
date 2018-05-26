@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+
+  input#userInput(type="number")
+
+  div
+    button#calculateFeetFromMiles Calculate Feet From Miles
+
+  button#search Search
+
+  div
+    pre#displaySearch
