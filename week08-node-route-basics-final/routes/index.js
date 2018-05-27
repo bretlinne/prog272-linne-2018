@@ -16,7 +16,17 @@ router.get('/search', function(req, res, next){
   });
 });
 
-router.get('/calculateFeetFromMiles', function(request, response) {
-    response.send({result: request.query.miles * 5280});
+router.get('/calculateFeetFromMiles', function(req, res, next) {
+    'use strict';
+    console.log('Calc button pressed');
+    var msg = {result: req.query.miles * 5280};
+    res.send({msg});
+});
+
+router.post('/calculateCircumference', function(req, res) {
+    var radius = req.body.propForServer;
+    console.log('Calc circumference pressed, radius: ' + radius);
+    var msg = {result: 2 * Math.PI * radius }
+    res.send({msg});
 });
 module.exports = router;
