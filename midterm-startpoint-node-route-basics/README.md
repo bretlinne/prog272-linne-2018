@@ -1,2 +1,0 @@
-# NodeRouteBasics
-by Charlie Calvert

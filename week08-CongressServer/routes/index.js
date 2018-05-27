@@ -23,15 +23,15 @@ function readFile(fileName) {
     });
 }
 
+
 router.get('/address-list', function(req, res) {
     'use strict';
     readFile(__dirname + '/address-list.json')
         .then((json) => {
-            //res.send(<YOU WRITE THIS PART>);
-            //console.log(json.result);  // we want to transform this fro string to object
             const addressAsJson = JSON.parse(json.result);
             res.send(addressAsJson);
         });
+    console.log("address-list route called");
 });
 
 module.exports = router;

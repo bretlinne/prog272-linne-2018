@@ -33,7 +33,7 @@ class AddressShow extends Component {
         return (
             <div className="App">
                 <RaisedButton
-                    label="Set Address"
+                    label="Fetch Addresses"
                     labelPosition="before"
                     primary={true}
                     icon={
@@ -42,7 +42,12 @@ class AddressShow extends Component {
                         </FontIcon>
                     }
                     style={styles.button}
-                    onClick={this.props.setAddress}
+                    //onClick={this.props.setAddress}
+                    // does is work to assign the address prop to the return of
+                    // the fetchAddress call?  No--it says address is read-only.
+                    //onClick={this.props.address=this.props.fetchAddress}
+                    //onClick={(e) => this.props.setAddress(1, e)}
+                    onClick={this.props.fetchAddress}
                 />
                 <p className="App-intro">
                     First Name: {this.props.address.firstName}
@@ -77,6 +82,7 @@ AddressShow.propTypes = {
         fax: PropTypes.string,
         tollfree: PropTypes.string
     }),
-    setAddress: PropTypes.func
+    setAddress: PropTypes.func,
+    fetchAddress: PropTypes.func
 };
 export default AddressShow;

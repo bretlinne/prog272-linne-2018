@@ -2,7 +2,7 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:30026",
+  "proxy": "http://localhost:30030",
   "dependencies": {
     "react": "^16.4.0",
     "react-dom": "^16.4.0",

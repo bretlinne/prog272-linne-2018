@@ -2,6 +2,7 @@
   "name": "week06-retry-address-show_start-w-jest-then-component-then-address-show",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://localhost:30026",
   "dependencies": {
     "dev": "^0.1.3",
     "enzyme-adapter-react-16": "^1.1.1",
