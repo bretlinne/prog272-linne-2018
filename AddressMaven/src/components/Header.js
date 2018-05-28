@@ -47,12 +47,5 @@ class Header extends Component {
         );
     }
 }
-/*
-                <ul>
-                    <li><Link to="/address-part">Address</Link></li>
-                    <li><Link to="/get-file">Get File</Link></li>
-                </ul>
-                    <img src={logo} className="App-logo" alt="logo" />
-                    <h1 className="App-title">React Address Show Assignment</h1>
-                    */
+
 export default Header;

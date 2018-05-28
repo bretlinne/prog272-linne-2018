@@ -28,9 +28,22 @@ class AddressShow extends Component {
         return (
             <View style={styles.container}>
                 <Button
+                    id={"buttonFetch"}
                     style={styles.buttonView}
-                    onPress={this.props.setAddress}
+                    onPress={(e) => this.props.setAddress(0, e)}
                     title="Set Address"
+                />
+                <Button
+                    id={"buttonRightOne"}
+                    style={styles.buttonView}
+                    onPress={(e) => this.props.setAddress(1, e)}
+                    title=">"
+                />
+                <Button
+                    id={"buttonLeftOne"}
+                    style={styles.buttonView}
+                    onPress={(e) => this.props.setAddress(-1, e)}
+                    title="<"
                 />
                 <Text style={styles.addressContainer}>
                     First Name: {this.props.address.firstName}
@@ -77,4 +90,5 @@ AddressShow.propTypes = {
     }),
     setAddress: PropTypes.func
 };
+
 export default AddressShow;
