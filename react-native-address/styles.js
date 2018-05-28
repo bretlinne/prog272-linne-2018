@@ -42,5 +42,19 @@ export default StyleSheet.create({
         borderWidth: 1,
         borderColor: '#fff',
         width: '75%'
+    },
+    buttonRight: {
+        marginRight: 40,
+        marginLeft: 40,
+        marginTop: 10,
+        paddingTop: 20,
+        paddingBottom: 20,
+        paddingLeft: 20,
+        paddingRight: 20,
+        backgroundColor: '#68a0cf',
+        borderRadius: 10,
+        borderWidth: 1,
+        borderColor: '#fff',
+        width: '75%'
     }
 });

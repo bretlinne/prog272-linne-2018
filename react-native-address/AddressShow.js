@@ -3,7 +3,9 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 // Put this code near the top
 import styles from './styles';
-import { Text, View, Button } from 'react-native';
+//import { Text, View, Button } from 'react-native';
+import { Text, View, Button} from 'react-native';
+//import  Button  from 'react-native-material-design';
 
 class AddressShow extends Component {
     constructor(props) {
@@ -27,6 +29,7 @@ class AddressShow extends Component {
         }
         return (
             <View style={styles.container}>
+
                 <Button
                     id={"buttonFetch"}
                     style={styles.buttonView}
@@ -35,7 +38,7 @@ class AddressShow extends Component {
                 />
                 <Button
                     id={"buttonRightOne"}
-                    style={styles.buttonView}
+                    style={styles.buttonRight}
                     onPress={(e) => this.props.setAddress(1, e)}
                     title=">"
                 />

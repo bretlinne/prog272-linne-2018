@@ -22,6 +22,8 @@
     "expo": "^27.0.1",
     "react": "16.3.1",
     "react-native": "~0.55.2",
+    "react-native-material-design": "^0.3.7",
+    "react-native-material-design-styles": "^0.2.7",
     "react-router-native": "^4.2.0"
   }
 }
