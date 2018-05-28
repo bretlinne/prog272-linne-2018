@@ -28,8 +28,34 @@ class Address extends Component {
     componentWillUnmount() {
         this.canceled = true;
     }
+    setAddress = (offset) => {
+        if (this.debug) {
+            console.log('setAddress called.');
+        }
+        let value = this.state.addressIndex;
+        value += offset;
+  /*      switch(value){
+            case -1:
+                value = 0;
+                break;
+            case this.state.addressList.length:
+                value = this.state.addressList.length-1;
+                break;
+            default:
+                {}
 
-
+        }
+*/
+        if (value > this.state.addressList.length-1){
+            value = this.state.addressList.length-1;
+        }
+        else if (value < 0){
+            value = 0;
+        }
+        this.setState({addressIndex: value });
+        this.setState({address: this.state.addressList[value] });
+    };
+    /* WRONG WAY:
     setAddress = (offset) => {
 
         this.addressIndex += offset;
@@ -38,6 +64,22 @@ class Address extends Component {
             address: tempAddressList[this.addressIndex]
         });
     };
+    */
+    getAddressList = () =>{
+        fetch('/address-list')
+            .then(response => response.json())
+            .then(addressListFromServer =>{
+                if(!this.cancelled){
+                    this.setState({addressList: addressListFromServer});
+                    this.setState({index: 0});
+                }
+            })
+            .catch(function(ex) {
+                console.log('something went wrong', ex);
+            });
+    }
+
+/*  WRONG WAY
 
     getAddressList = () =>{
         fetch('/address-list')
@@ -54,12 +96,13 @@ class Address extends Component {
                     this.setState({addressList: addressListFromServer});
                     this.setState({index: 0});
                 }
-                
+
             })
             .catch(function(ex) {
                 console.log('something went wrong', ex);
             });
     }
+    */
     render() {
         return (
             <div className="App" id="Address">

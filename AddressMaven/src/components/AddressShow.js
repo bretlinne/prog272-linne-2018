@@ -7,7 +7,7 @@ import RaisedButton from 'material-ui/RaisedButton';
 //import ActionAndroid from 'material-ui/svg-icons/action/android';
 
 import FontIcon from 'material-ui/FontIcon';
-import { red500 } from 'material-ui/styles/colors';
+import { blueGrey50 } from 'material-ui/styles/colors';
 import styles from './styles';
 
 class AddressShow extends Component {
@@ -33,12 +33,35 @@ class AddressShow extends Component {
         return (
             <div className="App">
                 <RaisedButton
+                    id={"leftTen"}
+                    primary={true}
+                    icon={
+                        <FontIcon className="material-icons" color={blueGrey50}>
+                            fast_rewind
+
+                        </FontIcon>}
+                    style={styles.button}
+                    onClick={(e) => this.props.setAddress(-10, e)}
+                />
+                <RaisedButton
+                    id={"leftOne"}
+                    primary={true}
+                    icon={
+                        <FontIcon className="material-icons" color={blueGrey50}>
+                            arrow_back_ios
+
+                        </FontIcon>}
+                    style={styles.button}
+                    onClick={(e) => this.props.setAddress(-1, e)}
+                />
+                <RaisedButton
+                    id={"fetchAddresses"}
                     label="Fetch Addresses"
                     labelPosition="before"
                     primary={true}
                     icon={
-                        <FontIcon className="material-icons" color={red500}>
-                            rss_feed
+                        <FontIcon className="material-icons" color={blueGrey50}>
+                            cloud_download
                         </FontIcon>
                     }
                     style={styles.button}
@@ -46,8 +69,31 @@ class AddressShow extends Component {
                     // does is work to assign the address prop to the return of
                     // the fetchAddress call?  No--it says address is read-only.
                     //onClick={this.props.address=this.props.fetchAddress}
-                    //onClick={(e) => this.props.setAddress(1, e)}
-                    onClick={this.props.fetchAddress}
+                    //onClick={(e) => {this.props.setAddress(1, e); this.disabled=true}}
+                    onClick={(e) => this.props.setAddress(0, e)}
+
+                />
+                <RaisedButton
+                    id={"rightOne"}
+                    primary={true}
+                    icon={
+                        <FontIcon className="material-icons" color={blueGrey50}>
+                            arrow_forward_ios
+
+                    </FontIcon>}
+                    style={styles.button}
+                    onClick={(e) => this.props.setAddress(1, e)}
+                />
+                <RaisedButton
+                    id={"rightTen"}
+                    primary={true}
+                    icon={
+                        <FontIcon className="material-icons" color={blueGrey50}>
+                            fast_forward
+
+                        </FontIcon>}
+                    style={styles.button}
+                    onClick={(e) => this.props.setAddress(10, e)}
                 />
                 <p className="App-intro">
                     First Name: {this.props.address.firstName}
