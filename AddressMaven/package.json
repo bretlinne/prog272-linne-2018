@@ -1,5 +1,5 @@
 {
-  "name": "week06-retry-address-show_start-w-jest-then-component-then-address-show",
+  "name": "AddressMaven",
   "version": "0.1.0",
   "private": true,
   "proxy": "http://localhost:30026",
