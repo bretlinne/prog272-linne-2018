@@ -14,7 +14,7 @@ class Header extends Component {
                     <li><Link to="/get-file">Get File</Link></li>
                 </ul>
                     <img src={logo} className="App-logo" alt="logo" />
-                    <h1 className="App-title">React Address Show Assignment</h1>
+                    <h1 className="App-title">React Address Menu</h1>
 
 
             </div>
