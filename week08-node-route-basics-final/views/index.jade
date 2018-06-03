@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+
+  input#userInput(type="number")
+
+  div
+    button#calculateFeetFromMiles Calculate Feet from Miles
+    pre#displayArea
+
+  input#userInputCirc(type="number")
+  div
+    button#calculateCircumference Calculate Circumference
+    pre#displayAreaCirc

@@ -26,7 +26,7 @@ class App extends Component {
         const address = this.props.addressList[1];
         this.addressIndex = 1;
         this.setState({
-            address: setAddress[this.addressIndex];
+            address: setAddress[this.addressIndex]
 
         })
     };

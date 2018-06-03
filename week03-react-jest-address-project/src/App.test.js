@@ -37,9 +37,7 @@ describe('Jest Tests', function () {
 
     it('renders state of File paragraph after button click', () => {
         const wrapper = shallow(<App />);
-        const nineSign = <p className="App-intro">file: url-file.js</p>;
-        wrapper.find('#getFile').simulate('click');
-        expect(wrapper.contains(nineSign)).toBe(true);
+        a
     });
 
 });
