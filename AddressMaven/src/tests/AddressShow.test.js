@@ -4,6 +4,10 @@ import AddressShow from '../components/AddressShow';
 import { configure, shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import AddressList from '../address-list';
+import AppBar from 'material-ui/AppBar';
+import Drawer from 'material-ui/Drawer';
+import MenuItem from 'material-ui/MenuItem';
+
 configure({ adapter: new Adapter() });
 
 describe('AddressShow Shallow Suite', function() {

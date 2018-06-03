@@ -26,18 +26,20 @@ class Header extends Component {
                 />
                 <Drawer
                     docked={false}
-                    width={200}
+                    width={350}
                     open={this.state.open}
                     onRequestChange={this.handleToggle}
                 >
-                    <AppBar title="Address Maven" />
+                    <AppBar title="Navigation" />
 
                     <MenuItem
+                        id='addressButton'
                         primaryText="Address"
                         containerElement={<Link to="/" />}
                         onClick={this.handleToggle}
                     />
                     <MenuItem
+                        id='getFileButton'
                         primaryText="GetFile"
                         containerElement={<Link to="/get-file" />}
                         onClick={this.handleToggle}
@@ -47,12 +49,5 @@ class Header extends Component {
         );
     }
 }
-/*
-                <ul>
-                    <li><Link to="/address-part">Address</Link></li>
-                    <li><Link to="/get-file">Get File</Link></li>
-                </ul>
-                    <img src={logo} className="App-logo" alt="logo" />
-                    <h1 className="App-title">React Address Show Assignment</h1>
-                    */
+
 export default Header;
