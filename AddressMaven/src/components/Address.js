@@ -145,5 +145,11 @@ class Address extends Component {
 * This COULD be an array.  I can try indexing the data like an array and see if it works.
 * 6)
  */
+git tag -a v8.0.3 -m "React-Native-Address assignment complete"
+549  git add .
+550  git commit -m "React-native-address done"
+551  git push
+552  git push origin v8.0.3
+
 
 export default Address;
