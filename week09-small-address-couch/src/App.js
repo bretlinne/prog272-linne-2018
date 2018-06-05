@@ -6,7 +6,14 @@ import Button from '@material-ui/core/Button';
 import Input from '@material-ui/core/Input';
 import InputLabel from '@material-ui/core/InputLabel';
 import FormControl from '@material-ui/core/FormControl';
+import { withStyles } from '@material-ui/core/styles';
+import PropTypes from 'prop-types';
 
+const styles = theme => ({
+    formControl:{
+        marginLeft: theme.spacing.unit,
+    }
+});
 class App extends Component {
     constructor(props) {
         super(props);
@@ -115,7 +122,9 @@ class App extends Component {
         this.db.replicate.from(this.remoteCouch, opts, this.syncError);
     };
 
+
     render() {
+        const{classes} = this.props;
         return (
             <div className="App">
                 <header className="App-header">
@@ -126,21 +135,21 @@ class App extends Component {
                 <p>{this.state.lastName}</p>
                 <p>{this.state.address}</p>
                 <div>
-                    <FormControl>
+                    <FormControl className={classes.formControl}>
                         <InputLabel htmlFor="name-simple">First Name</InputLabel>
                         <Input id="name-simple"
                                value={this.state.firstName}
                                onChange={this.handleFirst}/>
                     </FormControl>
 
-                    <FormControl>
+                    <FormControl className={classes.formControl}>
                         <InputLabel htmlFor="name-simple">Last Name</InputLabel>
                         <Input id="name-simple"
                                value={this.state.lastName}
                                onChange={this.handleLast}/>
                     </FormControl>
 
-                    <FormControl>
+                    <FormControl className={classes.formControl}>
                         <InputLabel htmlFor="name-simple">Address</InputLabel>
                         <Input id="name-simple"
                                value={this.state.address}
@@ -189,5 +198,8 @@ class App extends Component {
         );
     }
 }
-
-export default App;
+App.propTypes = {
+    classes: PropTypes.object.isRequired
+};
+export default withStyles(styles)(App);
+//export default App;
