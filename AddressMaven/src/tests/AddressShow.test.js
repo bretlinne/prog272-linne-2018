@@ -45,6 +45,14 @@ describe('AddressShow Shallow Suite', function() {
         expect(wrapper.contains(welcome)).toEqual(true);
     };
 
+    // this is looking for an id on a button.  Give it one.
+    fit('handles click on foobar with enzyme', () => {
+        const wrapper = shallow(<AddressShow />);
+        console.log(wrapper.debug());
+        wrapper.find('#fetchAddresses').simulate('click');
+        expect(wrapper).toMatchSnapshot();
+    });
+
     it('renders and displays the first name', () => {
         defaultFieldTest('First Name: unknown', 0);
         afterClickFieldTest('First Name: ' + AddressList.firstName, 0);
