@@ -9,6 +9,7 @@ import FormControl from '@material-ui/core/FormControl';
 import { withStyles } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
 import Paper from '@material-ui/core/Paper';
+import AddressEdit from './AddressEdit';
 
 const styles = theme => ({
     button: {
@@ -41,9 +42,41 @@ class AddressShow extends Component {
             }
         };
     }
+    setEdits = (name, event) => {
+        const data = this.props.name;
+        //var data = this.props.name;
+        data[name] = event.target.value;
+        this.setState({edits: data});
+    };
+
+    addressEdit = address => {
+        console.log(address);
+
+        if (!address) {
+            return this.setState({editOpen: false});
+        }
+
+        this.setState({
+            edits: address,
+            editOpen: false
+        });
+    };
+
+    save = () => {
+        this.props.save(this.state.edits);
+    };
 
     render() {
         const {classes} = this.props;
+        const editDialog = this.state.editOpen ? (
+            <AddressEdit
+                address={this.props.name}
+                open={this.state.editOpen}
+                addressEdit={this.addressEdit}
+            />
+        ) : (
+            <div/>
+        );
 
         return (
             <div className={classes.container}>
@@ -76,13 +109,6 @@ class AddressShow extends Component {
                         <Button
                             color="secondary"
                             variant="raised"
-                            onClick={() => this.setState({editOpen: true})}
-                        >
-                            Edit
-                        </Button>
-                        <Button
-                            color="secondary"
-                            variant="raised"
                             onClick={this.save}
                         >
                             Save
@@ -96,6 +122,14 @@ class AddressShow extends Component {
                         >
                             Delete
                         </Button>
+                        <Button
+                            color="secondary"
+                            variant="raised"
+                            onClick={() => this.setState({editOpen: true})}
+                        >
+                            Edit
+                        </Button>
+                        {editDialog}
                     </div>
                 </Paper>
             </div>
