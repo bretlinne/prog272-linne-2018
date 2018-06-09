@@ -16,7 +16,16 @@ class AddressEditFields extends Component {
                     onChange={e => this.props.addressChangedByUser('firstName', e)}
                     fullWidth
                 />
-                // YOU ADD A LASTNAME TextField
+                <TextField
+                    autoFocus
+                    margin="dense"
+                    id="name"
+                    label="Last Name"
+                    type="string"
+                    value={this.props.address.lastName}
+                    onChange={e => this.props.addressChangedByUser('lastName', e)}
+                    fullWidth
+                />
             </div>
         );
     }

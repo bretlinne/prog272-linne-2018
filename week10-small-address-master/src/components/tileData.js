@@ -17,7 +17,7 @@ export const gitItems = (
             <ListItemIcon>
                 <InboxIcon/>
             </ListItemIcon>
-            <ListItemText primary="GitUser"/>
+            <ListItemText primary="Home"/>
         </ListItem>
         <ListItem
             button
@@ -31,11 +31,11 @@ export const gitItems = (
         <ListItem
             button
             component={Link}
-            to="/gist-lister">
+            to="/init-db">
             <ListItemIcon>
                 <SendIcon/>
             </ListItemIcon>
-            <ListItemText primary="Gist Lister"/>
+            <ListItemText primary="Initialize DB"/>
         </ListItem>
     </div>
 );

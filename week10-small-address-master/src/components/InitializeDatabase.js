@@ -67,7 +67,7 @@ class InitializeDatabase extends Component {
         });
     };
 
-    getFive = () => {
+/*    getFive = () => {
         this.props.dataManager.db
             .find({
                 selector: {
@@ -80,7 +80,7 @@ class InitializeDatabase extends Component {
             });
 
     };
-
+*/
     showIndex = () => {
 
         this.props.dataManager.db

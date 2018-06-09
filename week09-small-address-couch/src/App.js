@@ -21,7 +21,7 @@ class App extends Component {
             addressIndex: 10000,
             firstName: 'unknown',
             lastName: 'unknown',
-            address: 'unknown',
+            //address: 'unknown',
             ids: []
         }
     }
@@ -48,7 +48,7 @@ class App extends Component {
             _id: new Date().toISOString(),
             firstName: data.firstName,
             lastName: data.lastName,
-            address: data.address,
+            //address: data.address,
             completed: false
         };
         this.db.put(address, function callback(err, result) {
@@ -79,7 +79,7 @@ class App extends Component {
              _id: new Date().toISOString(),
              firstName: this.state.firstName,
              lastName: this.state.lastName,
-             address: this.state.address,
+             //address: this.state.address,
              completed: false
          };
         this.db.put(address, function callback(err, result) {
@@ -99,9 +99,9 @@ class App extends Component {
     handleLast = event => {
         this.setState({lastName: event.target.value});
     };
-    handleAddress = event => {
-        this.setState({address: event.target.value});
-    };
+    //handleAddress = event => {
+    //    this.setState({address: event.target.value});
+    //};
 
     update = () => {
         this.db.get(this.state.ids[0])
@@ -133,7 +133,7 @@ class App extends Component {
                 </header>
                 <p>{this.state.firstName}</p>
                 <p>{this.state.lastName}</p>
-                <p>{this.state.address}</p>
+
                 <div>
                     <FormControl className={classes.formControl}>
                         <InputLabel htmlFor="name-simple">First Name</InputLabel>
@@ -149,12 +149,12 @@ class App extends Component {
                                onChange={this.handleLast}/>
                     </FormControl>
 
-                    <FormControl className={classes.formControl}>
+                    {/*<FormControl className={classes.formControl}>
                         <InputLabel htmlFor="name-simple">Address</InputLabel>
                         <Input id="name-simple"
                                value={this.state.address}
                                onChange={this.handleAddress}/>
-                    </FormControl>
+                    </FormControl>*/}
 
                 </div>
                 <Button

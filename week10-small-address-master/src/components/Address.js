@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 //import logo from './logo.svg';
 //import '../Address.css';
-import PouchDB from 'pouchdb';
+//import PouchDB from 'pouchdb';
 import AddressShow from './AddressShow';
 import { withStyles } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
@@ -70,7 +70,7 @@ class Address extends Component {
     };
 
     save = (name) => {
-        console.log(name);
+        console.log("FOOBAR NAME: "+ name);
         this.props.dataManager
             .save(name)
             .then(function(response) {
@@ -92,9 +92,8 @@ class Address extends Component {
             });
     };
 
-    componentDidMount() {
 
-    }
+
 
     addAddressReal = () => {
         const indexValue = this.state.addressIndex + 1;
@@ -121,7 +120,7 @@ class Address extends Component {
     };
 
     render() {
-        const {classes} = this.props;
+        //const {classes} = this.props;
         return (
             <AddressShow
                 name={this.state.names[this.state.namesIndex]}
@@ -138,29 +137,3 @@ Address.propTypes = {
 };
 export default withStyles(styles)(Address);
 //export default Address;
-
-/*
-<div>
-                    <FormControl className={classes.formControl}>
-                        <InputLabel htmlFor="name-simple">First Name</InputLabel>
-                        <Input id="name-simple"
-                               value={this.state.firstName}
-                               onChange={this.handleFirst}/>
-                    </FormControl>
-
-                    <FormControl className={classes.formControl}>
-                        <InputLabel htmlFor="name-simple">Last Name</InputLabel>
-                        <Input id="name-simple"
-                               value={this.state.lastName}
-                               onChange={this.handleLast}/>
-                    </FormControl>
-
-                    <FormControl className={classes.formControl}>
-                        <InputLabel htmlFor="name-simple">Address</InputLabel>
-                        <Input id="name-simple"
-                               value={this.state.address}
-                               onChange={this.handleAddress}/>
-                    </FormControl>
-
-                </div>
- */

@@ -9,7 +9,7 @@ import DialogTitle from '@material-ui/core/DialogTitle';
 import AddressEditFields from './AddressEditFields';
 import addressList from '../address-list';
 
-const styles = {};
+//const styles = {};
 
 export default class AddressEdit extends React.Component {
     state = {
@@ -25,8 +25,8 @@ export default class AddressEdit extends React.Component {
         this.props.addressEdit(null);
     };
 
-    addressChangedByUser = (v, e) => {
-        this.props.address[v] = e.target.value;
+    addressChangedByUser = (index, event) => {
+        this.props.address[index] = event.target.value;
         this.setState({ address: this.props.address });
     };
 
@@ -44,19 +44,22 @@ export default class AddressEdit extends React.Component {
                     <DialogContent>
                         <DialogContentText>
                             Fill in the fields of the address record.
-                            <AddressEditFields
-                                //address={}
-                                address={this.props.address}
-                                //addressChangedByUser={}
-                                addressChangedByUser={this.props.addressChangedByUser}
-                            />
+
                         </DialogContentText>
+                        <AddressEditFields
+                            //address={}
+                            address={this.props.address}
+                            //addressChangedByUser={}
+                            // no props on this:
+                            addressChangedByUser={this.addressChangedByUser}
+                        />
                         <DialogActions>
                             <Button onClick={this.userCanceledDialog} color="primary">
                                 Cancel
                             </Button>
-                            // You add an Ok button where onClick calls
-                            // this.userClosedDialogNormal
+                            <Button onClick={this.userClosedDialogNormal} color="primary">
+                                Ok
+                            </Button>
                         </DialogActions>
                     </DialogContent>
 
