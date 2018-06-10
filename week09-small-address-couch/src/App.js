@@ -14,6 +14,7 @@ const styles = theme => ({
         marginLeft: theme.spacing.unit,
     }
 });
+
 class App extends Component {
     constructor(props) {
         super(props);
@@ -33,7 +34,7 @@ class App extends Component {
         // this will turn to true once we want to point the app to the CouchDB
         // instead of using IndexDB
         // this.remoteCouch = false;
-        this.remoteCouch = 'http://168.156.47.53:5984/address';
+        this.remoteCouch = 'http://192.168.1.15:5984/address';
         this.syncDom = document.getElementById('sync-wrapper');
         this.db.changes({
             since: 'now',
