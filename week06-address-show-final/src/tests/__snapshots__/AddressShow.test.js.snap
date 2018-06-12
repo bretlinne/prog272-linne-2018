@@ -1,0 +1,537 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AddressShow Shallow Suite should take an AddressShow snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <AddressShow
+    address={
+        Object {
+            "address": "unknown",
+            "city": "unknown",
+            "fax": "unknown",
+            "firstName": "unknown",
+            "lastName": "unknown",
+            "phone": "unknown",
+            "state": "unknown",
+            "tollfree": "unknown",
+            "zip": "unknown",
+          }
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <button
+          id="showAddressClick"
+          onClick={undefined}
+>
+          Show Address
+</button>,
+        <p
+          className="App-intro"
+>
+          First Name: 
+          unknown
+</p>,
+        <p
+          className="App-intro"
+>
+          Last Name: 
+          unknown
+</p>,
+        <p
+          className="App-intro"
+>
+          Address: 
+          unknown
+</p>,
+        <p
+          className="App-intro"
+>
+          City: 
+          unknown
+</p>,
+        <p
+          className="App-intro"
+>
+          State: 
+          unknown
+</p>,
+        <p
+          className="App-intro"
+>
+          Zip: 
+          unknown
+</p>,
+        <p
+          className="App-intro"
+>
+          Phone: 
+          unknown
+</p>,
+        <p
+          className="App-intro"
+>
+          Fax: 
+          unknown
+</p>,
+        <p
+          className="App-intro"
+>
+          Toll Free: 
+          unknown
+</p>,
+      ],
+      "className": "App",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Show Address",
+          "id": "showAddressClick",
+          "onClick": undefined,
+        },
+        "ref": null,
+        "rendered": "Show Address",
+        "type": "button",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "First Name: ",
+            "unknown",
+          ],
+          "className": "App-intro",
+        },
+        "ref": null,
+        "rendered": Array [
+          "First Name: ",
+          "unknown",
+        ],
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "Last Name: ",
+            "unknown",
+          ],
+          "className": "App-intro",
+        },
+        "ref": null,
+        "rendered": Array [
+          "Last Name: ",
+          "unknown",
+        ],
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "Address: ",
+            "unknown",
+          ],
+          "className": "App-intro",
+        },
+        "ref": null,
+        "rendered": Array [
+          "Address: ",
+          "unknown",
+        ],
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "City: ",
+            "unknown",
+          ],
+          "className": "App-intro",
+        },
+        "ref": null,
+        "rendered": Array [
+          "City: ",
+          "unknown",
+        ],
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "State: ",
+            "unknown",
+          ],
+          "className": "App-intro",
+        },
+        "ref": null,
+        "rendered": Array [
+          "State: ",
+          "unknown",
+        ],
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "Zip: ",
+            "unknown",
+          ],
+          "className": "App-intro",
+        },
+        "ref": null,
+        "rendered": Array [
+          "Zip: ",
+          "unknown",
+        ],
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "Phone: ",
+            "unknown",
+          ],
+          "className": "App-intro",
+        },
+        "ref": null,
+        "rendered": Array [
+          "Phone: ",
+          "unknown",
+        ],
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "Fax: ",
+            "unknown",
+          ],
+          "className": "App-intro",
+        },
+        "ref": null,
+        "rendered": Array [
+          "Fax: ",
+          "unknown",
+        ],
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "Toll Free: ",
+            "unknown",
+          ],
+          "className": "App-intro",
+        },
+        "ref": null,
+        "rendered": Array [
+          "Toll Free: ",
+          "unknown",
+        ],
+        "type": "p",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <button
+            id="showAddressClick"
+            onClick={undefined}
+>
+            Show Address
+</button>,
+          <p
+            className="App-intro"
+>
+            First Name: 
+            unknown
+</p>,
+          <p
+            className="App-intro"
+>
+            Last Name: 
+            unknown
+</p>,
+          <p
+            className="App-intro"
+>
+            Address: 
+            unknown
+</p>,
+          <p
+            className="App-intro"
+>
+            City: 
+            unknown
+</p>,
+          <p
+            className="App-intro"
+>
+            State: 
+            unknown
+</p>,
+          <p
+            className="App-intro"
+>
+            Zip: 
+            unknown
+</p>,
+          <p
+            className="App-intro"
+>
+            Phone: 
+            unknown
+</p>,
+          <p
+            className="App-intro"
+>
+            Fax: 
+            unknown
+</p>,
+          <p
+            className="App-intro"
+>
+            Toll Free: 
+            unknown
+</p>,
+        ],
+        "className": "App",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Show Address",
+            "id": "showAddressClick",
+            "onClick": undefined,
+          },
+          "ref": null,
+          "rendered": "Show Address",
+          "type": "button",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "First Name: ",
+              "unknown",
+            ],
+            "className": "App-intro",
+          },
+          "ref": null,
+          "rendered": Array [
+            "First Name: ",
+            "unknown",
+          ],
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "Last Name: ",
+              "unknown",
+            ],
+            "className": "App-intro",
+          },
+          "ref": null,
+          "rendered": Array [
+            "Last Name: ",
+            "unknown",
+          ],
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "Address: ",
+              "unknown",
+            ],
+            "className": "App-intro",
+          },
+          "ref": null,
+          "rendered": Array [
+            "Address: ",
+            "unknown",
+          ],
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "City: ",
+              "unknown",
+            ],
+            "className": "App-intro",
+          },
+          "ref": null,
+          "rendered": Array [
+            "City: ",
+            "unknown",
+          ],
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "State: ",
+              "unknown",
+            ],
+            "className": "App-intro",
+          },
+          "ref": null,
+          "rendered": Array [
+            "State: ",
+            "unknown",
+          ],
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "Zip: ",
+              "unknown",
+            ],
+            "className": "App-intro",
+          },
+          "ref": null,
+          "rendered": Array [
+            "Zip: ",
+            "unknown",
+          ],
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "Phone: ",
+              "unknown",
+            ],
+            "className": "App-intro",
+          },
+          "ref": null,
+          "rendered": Array [
+            "Phone: ",
+            "unknown",
+          ],
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "Fax: ",
+              "unknown",
+            ],
+            "className": "App-intro",
+          },
+          "ref": null,
+          "rendered": Array [
+            "Fax: ",
+            "unknown",
+          ],
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "Toll Free: ",
+              "unknown",
+            ],
+            "className": "App-intro",
+          },
+          "ref": null,
+          "rendered": Array [
+            "Toll Free: ",
+            "unknown",
+          ],
+          "type": "p",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

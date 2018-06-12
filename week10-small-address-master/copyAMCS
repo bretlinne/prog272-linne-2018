@@ -1,0 +1,6 @@
+#!/bin/bash
+
+sudo cp nrb.service /etc/systemd/system/AddressMavenFinal.service
+sudo systemctl enable nrb
+sudo systemctl start nrb
+systemctl status nrb

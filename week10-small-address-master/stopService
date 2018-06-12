@@ -1,0 +1,4 @@
+#!/bin/bash
+
+sudo systemctl stop AddressMavenFinal.service
+sudo systemctl disable AddressMavenFinal.service
