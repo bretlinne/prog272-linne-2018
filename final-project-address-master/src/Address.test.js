@@ -17,11 +17,12 @@ beforeEach(() => {
         addressList={addresses} />);
 });
 
-const addressProp = wrapper => wrapper
+const addressProp = wrapper => wrapper.dive()
     .find('WithStyles(AddressShow)')
-    .prop('address');
+    .prop('name');
 
 it('renders and displays the default first name', () => {
+    console.log(wrapper.dive().debug());
     expect(addressProp(wrapper).firstName).toEqual('unknown');
 });
 
