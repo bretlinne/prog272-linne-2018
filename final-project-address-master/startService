@@ -1,0 +1,4 @@
+#!/bin/bash
+
+sudo systemctl enable AddressMavenFinal.service
+sudo systemctl start AddressMavenFinal.service

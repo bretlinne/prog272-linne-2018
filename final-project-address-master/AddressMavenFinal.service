@@ -1,0 +1,19 @@
+[Unit]
+Description=Run Address Maven w/ Couch Server Function
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/npm start
+WorkingDirectory=/home/ubuntu/bin/week10-small-address-master
+Restart=always
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=AMCS
+User=ubuntu
+Group=ubuntu
+Environment=NODE_ENV=production
+Environment=AMCS_PORT=30029
+
+[Install]
+WantedBy=multi-user.target
+
