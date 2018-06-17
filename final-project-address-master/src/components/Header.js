@@ -56,7 +56,7 @@ class ElfHeader extends Component {
                             <MenuIcon/>
                         </IconButton>
                         <Typography variant="title" color="inherit" className={classes.flex}>
-                            AddressMavenCouchMaster
+                            AddressMavenCouchServerFinal
                         </Typography>
                     </Toolbar>
                 </AppBar>

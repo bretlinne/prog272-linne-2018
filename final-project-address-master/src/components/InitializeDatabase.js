@@ -67,20 +67,6 @@ class InitializeDatabase extends Component {
         });
     };
 
-/*    getFive = () => {
-        this.props.dataManager.db
-            .find({
-                selector: {
-                    _id: {$gte: null}
-                },
-                limit: 5
-            })
-            .then(docs => {
-                console.log(docs);
-            });
-
-    };
-*/
     showIndex = () => {
 
         this.props.dataManager.db
