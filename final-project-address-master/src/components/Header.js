@@ -9,7 +9,7 @@ import Typography from '@material-ui/core/Typography';
 import MenuIcon from '@material-ui/icons/Menu';
 import Divider from '@material-ui/core/Divider';
 import List from '@material-ui/core/List';
-import { gitItems, demoItems } from './tileData';
+import { sideBarItems , demoItems } from './tileData';
 
 
 const styles = {
@@ -36,7 +36,7 @@ class ElfHeader extends Component {
         const { classes } = this.props;
         const sideList = (
             <div className={classes.list}>
-                <List>{gitItems}</List>
+                <List>{sideBarItems}</List>
                 <Divider />
                 <List>{demoItems}</List>
             </div>

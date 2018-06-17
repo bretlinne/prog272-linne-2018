@@ -46,7 +46,7 @@ describe('Jest Header Tests', function() {
     });
 
     // can't understand how to test more complex elements than just text
-    
+
 /*    it('renders title and tests with containsMatchingElement', () => {
         const wrapper = shallow(<Header />);
         //console.log(wrapper.dive().debug())

@@ -3,6 +3,7 @@ const addresses = [
     {
         firstName: unknown,
         lastName: unknown,
+        phone: unknown,
     },
     {
         firstName: 'Curly',

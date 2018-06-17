@@ -140,27 +140,12 @@ class AddressShow extends Component {
                 <p className="App-intro">State: {this.props.address.state}</p>
                 <p className="App-intro">Zip: {this.props.address.zip}</p>
                 <p className="App-intro">Phone: {this.props.address.phone}</p>
-                <p className="App-intro">Fax: {this.props.address.fax}</p>
-                <p className="App-intro">
-                    Toll Free: {this.props.address.tollfree}
-                </p>
+
             </div>
         );
     }
 }
 AddressShow.propTypes = {
     classes: PropTypes.object.isRequired
-    /*address: PropTypes.shape({
-        firstName: PropTypes.string,
-        lastName: PropTypes.string,
-        address: PropTypes.string,
-        city: PropTypes.string,
-        state: PropTypes.string,
-        zip: PropTypes.string,
-        phone: PropTypes.string,
-        contact: PropTypes.string
-    }),
-    setAddress: PropTypes.func,
-    fetchAddress: PropTypes.func*/
 };
 export default withStyles(styles)(AddressShow);

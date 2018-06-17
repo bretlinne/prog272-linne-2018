@@ -1,5 +1,5 @@
 {
-  "name": "AddressMaven",
+  "name": "AddressMavenEditAddressDialog",
   "version": "0.1.0",
   "private": true,
   "proxy": "http://localhost:30026",

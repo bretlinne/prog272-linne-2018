@@ -5,32 +5,17 @@ import { configure, shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import addresses from '../address-list';
 configure({ adapter: new Adapter() });
+import dataManager from '../assets/FakeDataManager';
+
+
+let  wrapper = null;
 
 beforeEach(() => {
-    global.fetch = jest.fn().mockImplementation(() => {
-        const promise = new Promise(resolve => {
-            resolve({
-                ok: true,
-                json: function() {
-                    return [
-                        {
-                            firstName: 'Patty',
-                            lastName: 'Murray',
-                            address: '154 Russell Senate Office Building',
-                            city: 'Washington',
-                            state: 'D.C.',
-                            zip: '20510',
-                            phone: '(202) 224-2621',
-                            fax: '(202) 224-0238',
-                            tollfree: '(866) 481-9186'
-                        }
-                    ];
-                }
-            });
-        });
-        return promise;
-    });
+    wrapper = shallow(<Address
+        dataManager={dataManager}
+        addressList={addresses} />);
 });
+
 
 const setAddress = (wrapper) => {
     wrapper.instance().getAddress();
@@ -39,7 +24,9 @@ const setAddress = (wrapper) => {
     });
 };
 
-
+const addressProp = wrapper => wrapper
+    .find('WithStyles(AddressShow)')
+    .prop('address');
 
 const afterClickFieldTest = (wrapper, finder) => {
     setImmediate(() => {
@@ -60,11 +47,17 @@ const afterClickFieldTest = (wrapper, finder) => {
 
 //------------------------------------------------------------
 describe('Jest Address Tests', function() {
-    it('renders foo without crashing', () => {
+/*    it('renders foo without crashing', () => {
         const div = document.createElement('div');
         ReactDOM.render(<Address addressList={addresses} />, div);
     });
+*/
+    fit('renders and displays the default first name', () => {
+        expect(addressProp(wrapper).firstName).toEqual('unknown');
+    });
 
+
+    /*
     it('renders without crashing', () => {
         const div = document.createElement('div');
         ReactDOM.render(<MuiThemeProvider><Address/></MuiThemeProvider>, div);
@@ -82,4 +75,5 @@ describe('Jest Address Tests', function() {
         const welcome = <h1 className="App-title">Address Info</h1>;
         expect(wrapper.contains(welcome)).toBe(true);
     });
+    */
 }); // END DESCRIBE

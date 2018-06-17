@@ -13,6 +13,7 @@ class App extends Component {
                     <Header />
                     <Route exact path="/" component={Address} />
                     <Route path="/get-file" component={GetFile} />
+
                 </div>
             </BrowserRouter>
         );

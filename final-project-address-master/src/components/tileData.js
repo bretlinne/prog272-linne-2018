@@ -8,7 +8,7 @@ import StarIcon from '@material-ui/icons/Star';
 import SendIcon from '@material-ui/icons/Send';
 import { Link } from 'react-router-dom';
 
-export const gitItems = (
+export const sideBarItems = (
     <div>
         <ListItem
             button
@@ -45,11 +45,11 @@ export const demoItems = (
         <ListItem
             button
             component={Link}
-            to="/api-foo">
+            to="/get-file">
             <ListItemIcon>
                 <DraftsIcon/>
             </ListItemIcon>
-            <ListItemText primary="API Foo"/>
+            <ListItemText primary="get-file"/>
         </ListItem>
 
     </div>

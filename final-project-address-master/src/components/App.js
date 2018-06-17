@@ -6,6 +6,7 @@ import PropTypes from 'prop-types';
 import { BrowserRouter, Route } from 'react-router-dom';
 import dataManager from '../tools/PouchDbManager';
 import Home from './Home';
+import GetFile from './GetFile';
 import Header from './Header';
 import Address from './Address';
 import InitializeDatabase from './InitializeDatabase';
@@ -42,6 +43,13 @@ class App extends Component {
                                     {...props}
                                     dataManager={dataManager}
                                 />
+                            )}
+                        />}
+                        {<Route
+                            id="get-file"
+                            path="/get-file"
+                            render={props => (
+                                <GetFile />
                             )}
                         />}
                     </div>

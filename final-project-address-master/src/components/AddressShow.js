@@ -3,7 +3,6 @@ import { withStyles } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
 import Paper from '@material-ui/core/Paper';
 import AddressEdit from './AddressEdit';
-import blue from '@material-ui/core/colors/blue';
 import MuiButton from '@material-ui/core/Button';
 import Icon from '@material-ui/core/Icon';
 
@@ -88,35 +87,40 @@ class AddressShow extends Component {
                 <Paper className={classes.rootBar}>
                     <div className="App">
                         <MuiButton
-                            color={blue}
+                            className={classes.button}
+                            color='primary'
                             variant='raised'
                             onClick={(e) => this.props.setAddress(-10, e)}
                         >
                             <Icon>fast_rewind</Icon>
                         </MuiButton>
                         <MuiButton
-                            color={blue}
+                            className={classes.button}
+                            color='primary'
                             variant='raised'
                             onClick={(e) => this.props.setAddress(-1, e)}
                         >
                             <Icon>arrow_back_ios</Icon>
                         </MuiButton>
                         <MuiButton
-                            color={blue}
+                            className={classes.button}
+                            color='primary'
                             variant='raised'
                             onClick={this.props.showAddress}
                         >
                             <Icon>cloud_download</Icon>
                         </MuiButton>
                         <MuiButton
-                            color={blue}
+                            className={classes.button}
+                            color='primary'
                             variant='raised'
                             onClick={event => this.props.setAddress(1, event)}
                         >
                             <Icon>arrow_forward_ios</Icon>
                         </MuiButton>
                         <MuiButton
-                            color={blue}
+                            className={classes.button}
+                            color='primary'
                             variant='raised'
                             onClick={event => this.props.setAddress(10, event)}
                         >
@@ -126,14 +130,16 @@ class AddressShow extends Component {
                     </div>
                     <div className="App">
                         <MuiButton
-                            color={blue}
+                            className={classes.button}
+                            color='secondary'
                             variant='raised'
                             onClick={this.save}
                         >
                             <Icon>save</Icon>
                         </MuiButton>
                         <MuiButton
-                            color={blue}
+                            className={classes.button}
+                            color='secondary'
                             variant='raised'
                             onClick={event =>
                                 this.props.delete(this.props.name, event)
@@ -142,7 +148,8 @@ class AddressShow extends Component {
                             <Icon>delete</Icon>
                         </MuiButton>
                         <MuiButton
-                            color={blue}
+                            className={classes.button}
+                            color='secondary'
                             variant='raised'
                             onClick={() => this.setState({editOpen: true})}
                         >
